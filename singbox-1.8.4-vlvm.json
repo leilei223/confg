@@ -375,18 +375,18 @@
       {
         "tag": "SV3_vmess",
         "type": "vmess",
-        "server": "www.crispyrainbow.online",
-        "server_port": 8080,
-        "uuid": "22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0",
+        "server": "www.crispyrainbow.online", //修改对应地址
+        "server_port": 8080,  //修改对应端口
+        "uuid": "22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0", //修改对应uuid
         "security": null,
         "alter_id": 0,
         "packet_encoding": "xudp",
         "transport": {
           "type": "ws",
           "headers": {
-            "Host": "www.crispyrainbow.online"
+            "Host": "www.crispyrainbow.online"  //修改对应host
           },
-          "path": "/"
+          "path": "/"  //修改对应path，没有不填
         }
       }
     ],
