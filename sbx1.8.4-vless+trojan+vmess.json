@@ -449,16 +449,17 @@
           "path": "/afrhms16v.bestxray.buzz:443/linkws" //修改对应path
         }
       },
+        //以下为trojan
       {
         "tag": "SV6_trojan",
         "type": "trojan",
-        "server": "falungong.19890604.day",
-        "server_port": 10819,
-        "password": "17e82f43-a0c6-4518-9d1f-3ac454429c3d",
+        "server": "falungong.19890604.day", //修改对应地址
+        "server_port": 10819, //修改对应端口
+        "password": "17e82f43-a0c6-4518-9d1f-3ac454429c3d", //修改对应密码
         "tls": {
           "enabled": true,
           "insecure": true,
-          "server_name": "cloudflare.node-ssl.cdn-alibaba.com"
+          "server_name": "cloudflare.node-ssl.cdn-alibaba.com" //修改对应sni
         }
       }
     ],
