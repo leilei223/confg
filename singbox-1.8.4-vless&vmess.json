@@ -95,7 +95,7 @@
         "users": []
       }
     ],
-    // 下方有标注的地方进行修改,保持默认节点SV1 SV2 SV3 名称，请勿修改名称。
+    // 下方有标注的地方进行修改,保持默认节点SV1 SV2 SV3 SV4名称，请勿修改名称。
     "outbounds": [
       {
         "tag": "proxy",
@@ -105,7 +105,8 @@
           "direct",
           "SV1_vless",
           "SV2_vless",
-          "SV3_vmess" //名称
+          "SV3_vmess",
+          "SV4_vmess"//名称
         ]
       },
       {
@@ -271,9 +272,10 @@
         "tag": "🇸🇬 狮城节点",
         "type": "selector",
         "outbounds": [
-            "SV1_vless",
-            "SV2_vless",
-            "SV3_vmess", //名称
+          "SV1_vless",
+          "SV2_vless",
+          "SV3_vmess",
+          "SV4_vmess",//名称 
           "proxy"
         ]
       },
@@ -320,7 +322,8 @@
         "outbounds": [
             "SV1_vless",
             "SV2_vless",
-            "SV3_vmess" //名称
+            "SV3_vmess",
+            "SV4_vmess" //名称 
         ],
         "url": "http://www.gstatic.com/generate_204",
         "interval": "10m",
@@ -385,6 +388,23 @@
           "type": "ws",
           "headers": {
             "Host": "www.crispyrainbow.online"  //修改对应host
+          },
+          "path": "/"  //修改对应path，没有不填
+        }
+      },
+      {
+        "tag": "SV4_vmess",
+        "type": "vmess",
+        "server": "www.blueberrywindow.online", //修改对应地址
+        "server_port": 8080,  //修改对应端口
+        "uuid": "22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0", //修改对应uuid
+        "security": null,
+        "alter_id": 0,
+        "packet_encoding": "xudp",
+        "transport": {
+          "type": "ws",
+          "headers": {
+            "Host": "www.blueberrywindow.online"  //修改对应host
           },
           "path": "/"  //修改对应path，没有不填
         }
