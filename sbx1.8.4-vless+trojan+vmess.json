@@ -399,35 +399,28 @@
         }
       },
       //以下为vmess 含专属tls证书配置
-      //此配置适配tls 无sni Fingerprint Alpn信息
+      //此配置适配tls 非443端口 
       {
         "tag": "SV4_vmess",
         "type": "vmess",
-        "server": "afrhms16v.bestxray.buzz", //修改对应地址
-        "server_port": 443,  //修改对应端口
-        "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f", //修改对应uuid
-        "security": null,
-        "alter_id": 0,
-        "packet_encoding": "xudp",
-        "tls": {
-            "enabled": true,
-            "insecure": true,
-            "server_name": "afrhms16v.bestxray.buzz" //修改为对应host
-          },
-          "transport": {
-            "type": "ws",
-            "headers": {
-              "Host": "afrhms16v.bestxray.buzz" //修改对应host
-            },
-            "path": "/linkws" //修改对应path
-          }
-      },
-      //tls 含sni Fingerprint Alpn信息
+      "server": "4a2u0a05.m1k2s.xyz",  //修改对应地址
+      "server_port": 31506,  //修改对应端口
+      "uuid": "67451537-45c4-435b-b672-474d4bc99f3d", //修改对应uuid
+      "security": "auto",
+      "alter_id": 0,
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "us05.lovemc.xyz" //修改对应sni
+      }
+    },
+      //tls 443端口 含sni Fingerprint Alpn信息
       {
         "tag": "SV5_vmess",
         "type": "vmess",
         "server": "23.227.38.33", //修改对应地址
-        "server_port": 443, //修改对应端口
+        "server_port": 443, 
         "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f", //修改对应uuid
         "security": "auto",
         "alter_id": 0,
