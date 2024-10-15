@@ -90,7 +90,7 @@
         "users": []
       }
     ],
-    // 以上为头部
+    // 以上为头部-----上方不要动
     // 以下为分流规则----
     "outbounds": [
       {
@@ -102,7 +102,7 @@
           "auto",
           "direct",
           "SV1",
-          "SV2"
+          "SV2"   //下方可增加名称，增加后若SV2 没有在末尾，sv2 需要加上逗号，下方的名称若是末尾，切记末尾没有逗号
         ]
       },
       {
@@ -110,7 +110,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2"
+          "SV2" //下方可增加名称
         ],
         "default": "SV1"
       },
@@ -119,7 +119,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2"
+          "SV2"//下方可增加名称
           
         ]
       },
@@ -128,7 +128,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2"
+          "SV2"//下方可增加名称
         ]
       },
       {
@@ -136,7 +136,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2"
+          "SV2"//下方可增加名称
         ]
       },
       {
@@ -144,7 +144,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2"
+          "SV2" //下方可增加名称
         ]
       },
       {
@@ -152,8 +152,8 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2",
-          "direct"
+          "SV2",  //下方可增加名称，不是结尾需加上逗号
+          "direct" 
         ]
       },
       {
@@ -168,7 +168,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2",
+          "SV2", //下方可增加名称，不是结尾需加上逗号
           "direct"
         ],
         "default": "SV1"
@@ -178,7 +178,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2"
+          "SV2" //下方可增加名称
         ],
         "default": "SV1"
       },
@@ -187,7 +187,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2"
+          "SV2" //下方可增加名称
         ]
       },
       {
@@ -195,7 +195,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2"
+          "SV2" //下方可增加名称
         ]
       },
       {
@@ -203,7 +203,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2",
+          "SV2", //下方可增加名称
           "direct"
         ]
       },
@@ -212,7 +212,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2",
+          "SV2", //下方可增加名称
           "direct"
         ]
       },
@@ -221,7 +221,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2",
+          "SV2", //下方可增加名称
           "direct"
         ]
       },
@@ -230,7 +230,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2",
+          "SV2", //下方可增加名称
           "direct"
         ]
       },
@@ -239,7 +239,7 @@
         "type": "selector",
         "outbounds": [
           "SV1",
-          "SV2",
+          "SV2", //下方可增加名称
           "direct"
         ]
       },
@@ -259,14 +259,13 @@
           "direct"
         ]
       },
-      // 自动---
       {
         "tag": "auto",
         "type": "urltest",
         "outbounds": [
           "direct",
           "SV1",
-          "SV2"
+          "SV2" //下方可增加名称
         ],
         "url": "http://www.gstatic.com/generate_204",
         "interval": "10m",
@@ -286,8 +285,9 @@
       },
       //以上为分流规则
       //以下为节点配置
+        //下方为SV1 vless节点配置信息---
   {
-        "tag": "SV1",
+        "tag": "SV1",  //名称，若修改记得一一对应
         "type": "vless",
         "server": "shopify.com", //修改优选ip或域名
         "server_port": 80, //端口可更改为80 8080 8880 2052 2086 2095
@@ -303,6 +303,8 @@
           "max_early_data": 2048
         }
       },
+         //到此结束 上方为SV1 vless节点配置信息---
+        //下方为SV2 vless节点配置信息---
       {
         "tag": "SV2",
         "type": "vless",
@@ -319,8 +321,9 @@
           "early_data_header_name": "Sec-WebSocket-Protocol",
           "max_early_data": 2048
         }
-      }
-    ],
+      }  //到此结束 上方为SV1 vless节点配置信息---，结尾这个}后面没有逗号表示这个配置的节点信息为最后一个，添加节点信息在这个}括号下添加，若添加节点，这个括号后记得加逗号，
+
+    ],  //这个方括号 两个vless节点结尾处---下方 不要动
   //结尾
     "route": {
       "auto_detect_interface": true,
